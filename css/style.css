@@ -19,7 +19,7 @@ header {
   background: #1e293b;
   padding: 16px 0;
   margin-bottom: 40px;
-  border-radius: 12px;
+  border-radius: 8px;
 }
 
 nav {
@@ -48,7 +48,6 @@ nav a:hover {
 
 .container {
   max-width: 800px;
-  /* Slightly narrower for better reading focus */
   margin: 0 auto;
   padding: 0 16px;
 }
@@ -78,7 +77,6 @@ nav a:hover {
   padding: 40px;
   border-radius: 16px;
   border: 1px solid #d2dbe6;
-  /* Removed shadow as requested */
   margin-bottom: 40px;
 }
 
@@ -126,9 +124,7 @@ label {
 textarea.input {
   resize: none;
   overflow-y: hidden;
-  /* Hide scrollbar for auto-resize */
   min-height: 150px;
-  /* Maintain a good initial size */
 }
 
 
@@ -142,7 +138,6 @@ textarea.input {
 
 .btn {
   display: inline-block;
-  /* Ensure <a> tags with this class behave like buttons */
   padding: 12px 24px;
   border-radius: 8px;
   border: none;
@@ -167,7 +162,6 @@ textarea.input {
 .btn.ghost {
   background: transparent;
   color: #475569;
-  /* removed border for a cleaner ghost look, or keep it minimal */
   border: 1px solid transparent;
 }
 
@@ -219,6 +213,7 @@ footer {
     grid-template-columns: 1fr 1fr;
     gap: 16px;
   }
+  
 }
 
 @media (max-width: 480px) {
@@ -234,6 +229,8 @@ footer {
   .card {
     padding: 24px;
   }
+
+  
 }
 
 /* Toast Notification */
