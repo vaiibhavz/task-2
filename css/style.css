@@ -213,7 +213,7 @@ footer {
     grid-template-columns: 1fr 1fr;
     gap: 16px;
   }
-  
+
 }
 
 @media (max-width: 480px) {
@@ -230,7 +230,7 @@ footer {
     padding: 24px;
   }
 
-  
+
 }
 
 /* Toast Notification */
@@ -333,4 +333,90 @@ footer {
     width: 100%;
     display: inline-block;
   }
+}
+
+/* ===== To-Do App Styles ===== */
+.task-input-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+/* Make input flexible to fill space, button stays natural width */
+.task-input-row .input {
+  flex: 1;
+}
+
+.task-list {
+  list-style: none;
+  margin-top: 16px;
+  margin-bottom: 40px;
+  /* Space for clear button */
+  border-top: 1px solid #e2e8f0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #e2e8f0;
+  transition: background-color 0.2s;
+}
+
+.task-item:hover {
+  background-color: #f8fafc;
+}
+
+.task-text {
+  font-size: 16px;
+  color: #334155;
+  word-break: break-all;
+  padding-right: 12px;
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+/* Delete button styles */
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1;
+  padding: 4px;
+  border-radius: 4px;
+  opacity: 0;
+  /* Hidden by default */
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-btn:hover {
+  color: #ef4444;
+  background-color: #fee2e2;
+}
+
+/* Show delete button on task hover */
+.task-item:hover .delete-btn {
+  opacity: 1;
+}
+
+.task-empty {
+  padding: 24px 0;
+  text-align: center;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+/* Clear All container alignment */
+.right-align {
+  justify-content: flex-end;
 }
